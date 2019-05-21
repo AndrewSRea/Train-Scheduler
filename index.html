@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Train Scheduler</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid" id="jumbo">
+            <div class="container">
+                <h1 class="display-4">Train Time is Fun Time!</h1>
+                <p class="lead">Choo choo! Wahoo!</p>
+            </div>
+        </div>
+        <div class="card" style="width: 75rem;">
+            <div class="card-header">
+                <p id="cardHead">Current Train Schedule</p>
+            </div>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td id="firstLine">Train Name</td>
+                        <td id="firstLine">Destination</td>
+                        <td id="firstLine">Frequency (min)</td>
+                        <td id="firstLine">Next Arrival</td>
+                        <td id="firstLine">Minutes Away</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Cannon Beach Cannonball</td>
+                        <td>Astoria</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Grants Pass Grand Ol' Gal</td>
+                        <td>Eugene</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Mt. Hood Mountaineer</td>
+                        <td>Government Camp</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Albany Airbender</td>
+                        <td>Albany</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Baker City Railbreaker</td>
+                        <td>Astoria</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Deschutes Dasher</td>
+                        <td>Bend</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card" style="width: 75rem;">
+                <div class="card-header">
+                    Add Train
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Train Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Destination</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">First Train Time (HH:mm - military time)</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Frequency (min)</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+        </div>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,21 @@
+body {
+
+}
+
+#jumbo {
+    margin: 0 50px 25px 50px;
+    text-align: center;
+
+}
+
+.card {
+    margin: 0 0 25px 55px;
+    font-size: 15px;
+}
+#cardHead {
+    font-weight: bold;
+}
+
+#firstLine {
+    font-weight: bold;
+}
