@@ -8,6 +8,8 @@
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
 
     </head>
     <body>
@@ -15,6 +17,7 @@
             <div class="container">
                 <h1 class="display-4">Train Time is Fun Time!</h1>
                 <p class="lead">Choo choo! Wahoo!</p>
+                <h4>Current Time: <span id="timer"></span></h4>
             </div>
         </div>
         <div class="card" style="width: 75rem;">
@@ -22,7 +25,7 @@
                 <p id="cardHead">Current Train Schedule</p>
             </div>
             <table class="table">
-                <tbody>
+                <thead>
                     <tr>
                         <th scope="row"></th>
                         <td id="firstLine">Train Name</td>
@@ -31,54 +34,8 @@
                         <td id="firstLine">Next Arrival</td>
                         <td id="firstLine">Minutes Away</td>
                     </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Cannon Beach Cannonball</td>
-                        <td>Astoria</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Grants Pass Grand Ol' Gal</td>
-                        <td>Eugene</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Mt. Hood Mountaineer</td>
-                        <td>Government Camp</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Albany Airbender</td>
-                        <td>Albany</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Baker City Railbreaker</td>
-                        <td>Astoria</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Deschutes Dasher</td>
-                        <td>Bend</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                </thead>
+                <tbody id="add-row">
                 </tbody>
             </table>
         </div>
@@ -88,24 +45,26 @@
                 </div>
                 <form>
                     <div class="form-group">
-                        <label for="trainName">Train Name</label>
-                        <input type="text" class="form-control" id="inputTrainName" aria-describedby="trainName" placeholder="Enter name of train">
+                        <label for="text">Train Name</label>
+                        <input type="text" class="form-control" id="train-name">
                     </div>
                     <div class="form-group">
-                        <label for="destination">Destination</label>
-                        <input type="text" class="form-control" id="inputDestination" placeholder="Enter destination">
+                        <label for="text">Destination</label>
+                        <input type="text" class="form-control" id="destination">
                     </div>
                     <div class="form-group">
-                        <label for="trainTime">First Train Time (HH:mm - military time)</label>
-                        <input type="time" class="form-control" id="inputTime" placeholder="Enter 1st train time">
+                        <label for="text">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="first-train">
                     </div>
                     <div class="form-group">
-                        <label for="frequency">Frequency (min)</label>
-                        <input type="text" class="form-control" id="inputFrequency" placeholder="Frequency by minutes">
+                        <label for="text">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="add-train">Submit</button>
                 </form>
         </div>
+
+        <script type="text/javascript" src="assets/javascript/train.js"></script>  
 
     </body>
 
